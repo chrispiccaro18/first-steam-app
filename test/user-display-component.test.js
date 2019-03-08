@@ -3,7 +3,7 @@ const test = QUnit.test;
 QUnit.module('Create user display');
 
 function makeUserDisplay() {
-    return /*html*/ `
+    const html = /*html*/ `
         <article>
             <p>
                 Steam name:
@@ -14,6 +14,9 @@ function makeUserDisplay() {
             <img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/72/72789abfbdf55ae8e229c9782c871d8a90bb783b_full.jpg" alt="Avatar of chrispiccaro18">
         </article>
     `;
+    const template = document.createElement('template');
+    template.innerHTML = html;
+    return template.content;
 }
 
 test('create template', assert => {
@@ -32,5 +35,5 @@ test('create template', assert => {
     // act
     const result = makeUserDisplay();
     // assert
-    assert.equal(result, expected);
+    assert.htmlEqual(result, expected);
 });
