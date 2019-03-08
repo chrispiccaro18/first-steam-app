@@ -1,23 +1,8 @@
+import { makeUserDisplay } from '../src/user-display-component.js';
+
 const test = QUnit.test;
 
 QUnit.module('Create user display');
-
-function makeUserDisplay(user) {
-    const html = /*html*/ `
-        <article>
-            <p>
-                Steam name:
-                <a href="${user.profileurl}">
-                    ${user.personaname}
-                </a>
-            </p>
-            <img src="${user.avatarfull}" alt="Avatar of ${user.personaname}">
-        </article>
-    `;
-    const template = document.createElement('template');
-    template.innerHTML = html;
-    return template.content;
-}
 
 test('create template', assert => {
     // arrange
