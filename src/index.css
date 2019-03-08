@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, Helvetica, Verdana, sans-serif;
+}
+
+#steam-user-display article {
+    display: flex;
+    width: 300px;
+    height: 100px;
+    margin-top: 10px;
+    border: 1px solid black;
+    justify-content: flex-start;
+}
+
+#steam-user-display p {
+    margin: 0;
+    align-self: flex-start;
+}
+
+#steam-user-display a {
+    text-decoration: none;
+}
+
+#steam-user-display img {
+    height: 100%;
+    flex-grow: 0;
+    margin-left: 10px;
+}

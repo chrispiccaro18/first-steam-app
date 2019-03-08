@@ -4,10 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>First Steam App</title>
+    <link rel="stylesheet" type="text/css" href="src/index.css">
 </head>
 <body>
-   <header>
-       <h1>First Steam App</h1>
-   </header> 
+    <header>
+        <img src="assets/alchemy-logo.png" alt="Alchemy Code Lab Logo">
+        <h1>First Steam App</h1>
+    </header>
+    <main>
+        <form id="steam-id-search">
+            <input type="text" id="steam-id-input">
+            <button>Submit</button>
+        </form>
+        <section id="steam-user-display">
+            <article>
+                <p>
+                    Steam name:
+                    <a href="https://steamcommunity.com/profiles/76561198087595919/">
+                        chrispiccaro18
+                    </a>
+                </p>
+                <img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/72/72789abfbdf55ae8e229c9782c871d8a90bb783b_full.jpg" alt="Avatar of chrispiccaro18">
+            </article>
+        </section>
+    </main>
+    <script type="module" src="src/index.js"></script>
 </body>
 </html>
