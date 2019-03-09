@@ -3,7 +3,7 @@ const test = QUnit.test;
 QUnit.module('Make games list');
 
 function makeGameItem() {
-    return /*html*/ `
+    const html = /*html*/ `
         <li>
             <div>
                 <img class="title-div" src="http://media.steampowered.com/steamcommunity/public/images/apps/22380/1711fd8c46d739feec76bd4a64eaeeca5b87e3a7.jpg" alt="Fallout: New Vegas icon">
@@ -13,6 +13,9 @@ function makeGameItem() {
             <img src="http://media.steampowered.com/steamcommunity/public/images/apps/22380/1a52975c043227184162627285e4bc0c83216e02.jpg" alt="Fallout: New Vegas logo">
         </li>
     `;
+    const template = document.createElement('template');
+    template.innerHTML = html;
+    return template.content;
 }
 
 test('make game list item', assert => {
@@ -30,5 +33,5 @@ test('make game list item', assert => {
     // act
     const result = makeGameItem();
     // assert
-    assert.equal(result, expected);
+    assert.htmlEqual(result, expected);
 });
