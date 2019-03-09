@@ -12,5 +12,5 @@ window.addEventListener('hashchange', () => {
 
     fetch(idURL)
         .then(response => response.json())
-        .then(body => console.log(body));
+        .then(body => loadUserDisplay(body.response.players[0]));
 });
