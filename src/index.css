@@ -48,8 +48,9 @@ body {
     align-items: flex-start;
 }
 
-#steam-user-games-display img {
-    flex-grow: 0;
+#steam-user-games-display .logo {
+    /* flex-grow: 0; */
+    width: 100%;
 }
 
 #steam-user-games-display .title-div {
