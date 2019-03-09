@@ -25,3 +25,33 @@ body {
     flex-grow: 0;
     margin-left: 10px;
 }
+
+#steam-user-games-display {
+    display: flex;
+    flex-flow: wrap;
+    list-style-type: none;
+    padding: 0;
+}
+
+#steam-user-games-display li {
+    border: 1px solid black;
+    flex-basis: 25%;
+    margin-top: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#steam-user-games-display div {
+    display: flex;
+    align-items: flex-start;
+}
+
+#steam-user-games-display img {
+    flex-grow: 0;
+}
+
+#steam-user-games-display .title-div {
+    margin: 0;
+}
